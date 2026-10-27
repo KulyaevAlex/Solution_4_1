@@ -42,8 +42,9 @@ public class RectangleInfo {
         System.out.println();
 
         for (Rectangle rectangle : rectangles) {
-            System.out.println("Ширина измененного прямоугольника: " + rectangle.scale(factor).width());
-            System.out.println("Высота измененного прямоугольника: " + rectangle.scale(factor).height());
+            rectangle.scale(factor);
+            System.out.println("Ширина измененного прямоугольника: " + rectangle.getWight());
+            System.out.println("Высота измененного прямоугольника: " + rectangle.getHeight());
         }
     }
 }

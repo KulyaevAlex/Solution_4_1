@@ -47,14 +47,12 @@ public class Student {
 
     /**
      * метод выводящий всю информацию о студенте
-     *
-     * @param student - Объект Студент
      */
-    public void printInfo(Student student) {
-        System.out.println("Имя: " + student.getName());
-        System.out.println("Возраст: " + student.getAge());
-        System.out.println("Средний балл: " + student.getAverageScore());
-        System.out.println("Группа: " + student.getGroup());
+    public void printInfo() {
+        System.out.println("Имя: " + getName());
+        System.out.println("Возраст: " + getAge());
+        System.out.println("Средний балл: " + getAverageScore());
+        System.out.println("Группа: " + getGroup());
     }
 
     /**
@@ -70,11 +68,10 @@ public class Student {
     /**
      * Метод проверки минимального возраста
      *
-     * @param studentAge - Возраст студента
      * @param minimumAge - Минимальный возраст студента
      * @return - true если возраст не меньше минимального
      */
-    public boolean canGraduate(int studentAge, int minimumAge) {
-        return studentAge >= minimumAge;
+    public boolean canGraduate(int minimumAge) {
+        return getAge() >= minimumAge;
     }
 }

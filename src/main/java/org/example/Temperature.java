@@ -43,13 +43,8 @@ public class Temperature {
      * Метод возвращает объект Temperature, конвертируя значение из Кельвинов в Цельсий.
      */
     public static Temperature fromKelvin(double kelvin) {
-        double celsius = kelvin - KELVIN_ZERO_OFFSET;
+        double celsius = kelvin + KELVIN_ZERO_OFFSET;
         return new Temperature(celsius);
-    }
-
-    public Temperature toKelvin(double value) {
-        double kelvin = value + KELVIN_ZERO_OFFSET;
-        return new Temperature(kelvin);
     }
 
     /**

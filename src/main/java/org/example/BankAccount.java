@@ -4,7 +4,7 @@ public class BankAccount {
     /**
      * Счетчик созданных счетов
      */
-    static int totalAccounts = 0;
+    private static int totalAccounts = 0;
 
     private String accountNumber;
     private String client;
@@ -37,8 +37,8 @@ public class BankAccount {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public static int getTotalAccounts() {
+        return totalAccounts;
     }
 
     /**
@@ -56,8 +56,8 @@ public class BankAccount {
      * @param amount - Сумма, которую нужно вычесть из баланса
      */
     public void withdraw(double amount) {
-        if ((this.balance <= 0) || (amount > this.balance)) {
-            throw new IllegalArgumentException("Недостаточно средств");
+        if (amount > this.balance) {
+            System.out.println("Недостаточно средств");
         }
         this.balance -= amount;
     }

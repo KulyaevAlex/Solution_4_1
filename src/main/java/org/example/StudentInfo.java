@@ -20,7 +20,7 @@ public class StudentInfo {
         students.add(student3);
 
         for (Student student : students) {
-            student.printInfo(student);
+            student.printInfo();
         }
         System.out.println();
 
@@ -30,7 +30,7 @@ public class StudentInfo {
         System.out.println();
 
         for (Student student : students) {
-            System.out.println("Возраст студента " + student.getName() + " " + (student.canGraduate(student.getAge(), MIN_AGE) ? "не меньше минимального" : "меньше минимального"));
+            System.out.println("Возраст студента " + student.getName() + " " + (student.canGraduate(MIN_AGE) ? "не меньше минимального" : "меньше минимального"));
         }
     }
 }

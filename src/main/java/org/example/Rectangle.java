@@ -3,15 +3,6 @@ package org.example;
 public class Rectangle {
     private static int counter = 0;
 
-    /**
-     * Результат изменения сторон прямоугольника
-     *
-     * @param width  - Ширина
-     * @param height - Высота
-     */
-    public record modifiedRectangle(double width, double height) {
-    }
-
     private double widht;
     private double height;
     private int id;
@@ -58,7 +49,7 @@ public class Rectangle {
      * @return - Периметр прямоугольника
      */
     public double perimeter() {
-        return 2 * widht * height;
+        return 2 * (widht + height);
     }
 
     /**
@@ -76,8 +67,9 @@ public class Rectangle {
      * @param factor - Параметр, на который увеличиваются стороны
      * @return - Результат изменения
      */
-    public modifiedRectangle scale(double factor) {
-        return new modifiedRectangle(widht * factor, height * factor);
+    public void scale(double factor) {
+        widht *= factor;
+        height *= factor;
     }
 
     /**
