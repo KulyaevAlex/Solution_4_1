@@ -49,20 +49,19 @@ public class Student {
      * метод выводящий всю информацию о студенте
      */
     public void printInfo() {
-        System.out.println("Имя: " + getName());
-        System.out.println("Возраст: " + getAge());
-        System.out.println("Средний балл: " + getAverageScore());
-        System.out.println("Группа: " + getGroup());
+        System.out.println("Имя: " + name);
+        System.out.println("Возраст: " + age);
+        System.out.println("Средний балл: " + averageScore);
+        System.out.println("Группа: " + group);
     }
 
     /**
      * Метод, возвращающий информацию, является ли студент отличником (балл >= 4.5)
      *
-     * @param student - Объект Студент
      * @return - true, если студент - отличник
      */
-    public boolean isExcellent(Student student) {
-        return student.getAverageScore() > 4.5;
+    public boolean isExcellent() {
+        return averageScore > 4.5;
     }
 
     /**

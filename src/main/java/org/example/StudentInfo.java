@@ -25,7 +25,7 @@ public class StudentInfo {
         System.out.println();
 
         for (Student student : students) {
-            System.out.println("Студент " + student.getName() + " " + (student.isExcellent(student) ? "является отличником" : "не является отличником"));
+            System.out.println("Студент " + student.getName() + " " + (student.isExcellent() ? "является отличником" : "не является отличником"));
         }
         System.out.println();
 
